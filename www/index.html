@@ -8,11 +8,13 @@
   <script src="lib/angular/angular.min.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
   <script src="lib/onsenui/js/angular-onsenui.min.js"></script>
+  <script src="js/test.js"></script>
 
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
+  <!--<link rel="stylesheet" href="./images/background.png">-->
 
   <style>
     .background-image {
@@ -22,12 +24,12 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-    .background-color {
-      
+    .background-color{
+      background-color:white;
     }
-  </style>
+  </style> 
 
-  <script>
+ <!-- <script>
     ons.bootstrap()
       .controller('AppController', function() {
         var self = this;
@@ -43,7 +45,7 @@
     ons.ready(function() {
         console.log("Onsen UI is ready!");
     });
-  </script>
+  </script> -->
 </head>
 <body>
   <!-- test11111111 -->
@@ -59,19 +61,23 @@
 
   <ons-template id="top.html">
     <ons-page ng-controller="AppController as app">
-      <ons-toolbar>
+    <!--  <ons-toolbar>
         <div class="center">My App - {{app.title}}</div>
-      </ons-toolbar>
+      </ons-toolbar> -->
 
       <ons-tabbar position="auto">
         <ons-tab page="page1.html" label="Page 1" icon="square" active></ons-tab>
-        <ons-tab page="page2.html" label="Page 2" icon="square"></ons-tab>
-      </ons-tabbar>
+    <!--    <ons-tab page="page2.html" label="Page 2" icon="square"></ons-tab> -->
+      </ons-tabbar> 
     </ons-page>
-  </ons-template>
+  </ons-template> 
 
   <ons-template id="page1.html">
     <ons-page ons-show="app.title = 'Page 1'">
+      <!--<background-color: ffffff></background-color:> -->
+      <div class="background-color">
+      
+      </div>
       <div class="content" style="text-align: center">
         <p>農園・農家の名前</p>
         <input id="farmname"  placeholder="例：OWC農園">
