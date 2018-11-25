@@ -5,7 +5,7 @@ ons.bootstrap()
         
         self.init = function() {
           setTimeout(function() {
-            app.navi.pushPage('top.html');
+            app.navi.pushPage('page1.html');
           }, 2000);
         }
       });

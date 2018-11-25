@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
-  <!--<link rel="stylesheet" href="./images/background.png">-->
 
   <style>
     .background-image {
@@ -29,26 +28,8 @@
     }
   </style> 
 
- <!-- <script>
-    ons.bootstrap()
-      .controller('AppController', function() {
-        var self = this;
-        // self.login = function() {
-        //   app.navi.pushPage('top.html');
-        // }
-        self.init = function() {
-          setTimeout(function() {
-            app.navi.pushPage('top.html');
-          }, 2000);
-        }
-      });
-    ons.ready(function() {
-        console.log("Onsen UI is ready!");
-    });
-  </script> -->
 </head>
 <body>
-  <!-- test11111111 -->
   <ons-navigator page="login.html" var="app.navi"><ons-navigator>
 
   <ons-template id="login.html">
@@ -59,25 +40,17 @@
     </ons-page>
   </ons-template>
 
-  <ons-template id="top.html">
-    <ons-page ng-controller="AppController as app">
-    <!--  <ons-toolbar>
-        <div class="center">My App - {{app.title}}</div>
-      </ons-toolbar> -->
+    
+  <ons-template id="page2.html">
+    <ons-page ons-show="app.title = 'Page 2'"> 
 
-      <ons-tabbar position="auto">
-        <ons-tab page="page1.html" label="Page 1" icon="square" active></ons-tab>
-    <!--    <ons-tab page="page2.html" label="Page 2" icon="square"></ons-tab> -->
-      </ons-tabbar> 
-    </ons-page>
-  </ons-template> 
-
-  <ons-template id="page1.html">
-    <ons-page ons-show="app.title = 'Page 1'">
-      <!--<background-color: ffffff></background-color:> -->
       <div class="background-color">
-      
       </div>
+
+      <ons-toolbar>
+      <div class="left"><ons-back-button></ons-back-button></div>
+      </ons-toolbar>
+
       <div class="content" style="text-align: center">
         <p>農園・農家の名前</p>
         <input id="farmname"  placeholder="例：OWC農園">
@@ -103,14 +76,19 @@
 
       </div>
     </ons-page>
-  </ons-template>
+  </ons-template> 
 
-  </ons-template id="page2.html">
-    <ons-page ons-show="app.title = 'Page 2'">
+  <ons-template id="page1.html">
+    <ons-page ons-show="app.title = 'Page 1'">
+      <ons-toolbar>
+      <div class="left">農カツ</div>
+      <div class="right"><ons-button onclick="app.navi.pushPage('page2.html');">農業体験を掲載する</ons-button></div>
+    </ons-toolbar>
       <div class="content" style="text-align: center">
-        <p>Page 2 content</p>
+        <p>Page 1 content</p>
       </div>
-    </ons-page>
+
+ 
 
 </body>
 </html>
